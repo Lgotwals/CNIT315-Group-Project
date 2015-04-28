@@ -78,7 +78,7 @@ void isFailing()
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("WARNING: GPA is now D average");
+		printf("WARNING: GPA is below D average");
 	}
 	else if(GPA == 0.4)
 	{
@@ -185,6 +185,7 @@ void schoolday()
 	printf("remembering who you are.\n");
 	printf("================================================================================");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	printf("You go back to your dorm and decide to take a break before dinner.\n");
 	printf("\n\n");
 	//printf("%s"); 
 }
@@ -192,5 +193,6 @@ void schoolday()
 void watchmovie();
 void watchmovie()
 {
+	
 	//function for watching a movie and wasting time.
 }

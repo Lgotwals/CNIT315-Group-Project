@@ -53,7 +53,7 @@ void isStressed()
 	
 	else if (stressLevel == 20)
 	{
-		printf("You died. RIP.")	
+		printf("You died. RIP.\n");	
 		break;
 	}
 }
@@ -84,7 +84,7 @@ void isFailing()
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("WARNING:GPA very low. Do not let it get to 0 or you will fail out.")
+		printf("WARNING:GPA very low. Do not let it get to 0 or you will fail out.");
 	}
 	else if (GPA == 0.0)
 	{
@@ -242,5 +242,13 @@ void watchmovie()
 {
 	printf("================================================================================");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	printf("Your friend asks if you want to go to the movies.\n");
+	printf("You currently feel ok about how you are doing in your classes and feel that \n");
+	printf("going to the movies is a great idea!\n");
+	printf("\t==~~~~~~~~~~~~~~~~~~~~==\t\n");
+	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
+	printf("Do you want to go to the movies with your frinend? (y/n)\n");
+	yesNo = (char*)getchar();
+	validateYN(yesNo);
 	//function for watching a movie and wasting time.
 }

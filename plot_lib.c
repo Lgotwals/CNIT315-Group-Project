@@ -3,9 +3,12 @@
 #include <string.h>
 char yourFriend[50];
 char fName[50];
+int stressLevel;
+double GPA;
 
 
 //validation functions
+int validateYN(char* variable);
 int validateYN(char* variable)
 { 
 	while(strcmp(variable, "y") == 1 || strcmp(variable, "n") == 1)
@@ -16,7 +19,8 @@ int validateYN(char* variable)
 	return 0;
 }
 
-void validatenums(int variable)
+void validateNums(int variable);
+void validateNums(int variable)
 {
 	while (variable != 1 || variable != 2 || variable != 3 || variable != 4 
 	  || variable != 5 )
@@ -25,6 +29,36 @@ void validatenums(int variable)
 	}
 	//add else to write into &variable....
   }
+
+// Checks the stress level of the character. Prints warning messages if stress level gets too high, and eventually 
+// kills off character and ends game if stressLevel reaches 20.
+void isStressed();
+void isStressed()
+{
+	if (stressLevel == 17)
+	{
+		printf"Your current stress level is:");
+		printf("%d\n", stressLevel);
+		printf("Warning stress level is high. You are breaking out all over your face and have trouble sleeping. 
+						Do something fun, and watch your choices or else.");
+	}
+	
+	else if (stressLevel == 19)
+	{
+		printf"Your current stress level is:");
+		printf("%d\n", stressLevel);
+		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy. Do 
+						something fun to chill out out.");
+	}
+	
+	else if (stressLevel == 20)
+	{
+		printf("You died. RIP.")	
+		break;
+	}
+}
+
+
 void playTGCs();
 void playTGCs()
 {	

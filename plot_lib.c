@@ -57,6 +57,44 @@ void isStressed()
 		break;
 	}
 }
+//Checks the GPA of student. Prints warning messages if it falls too low, eventually failing the student if their
+//GPA reaches 0, ending the game. 
+void isFailing();
+void isFailing()
+{
+	if (GPA == 1.8)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("WARNING: GPA now below average C.");
+	}
+	else if (GPA == 1.4)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("WARNING: GPA is now D average");
+	}
+	else if  (GPA == 1.0);
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("WARNING: GPA is now D average");
+	}
+	else if(GPA == 0.4)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("WARNING:GPA very low. Do not let it get to 0 or you will fail out.")
+	}
+	else if (GPA == 0.0)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("Sorry, but its over. You failed out. You spent too much time hanging out with friends and having a good time
+						than studying. Shoulda studied more. Re-apply in the fall.");
+		break;
+	}
+}
 
 
 void playTGCs();

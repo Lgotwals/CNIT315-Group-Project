@@ -39,16 +39,16 @@ void isStressed()
 	{
 		printf"Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("Warning stress level is high. You are breaking out all over your face and have trouble sleeping. 
-						Do something fun, and watch your choices or else.");
+		printf("Warning stress level is high. You are breaking out all over your face and have trouble\n");
+		printf("sleeping.  Do something fun, and watch your choices or else.\n");
 	}
 	
 	else if (stressLevel == 19)
 	{
 		printf"Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy. Do 
-						something fun to chill out out.");
+		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy.\n");
+		printf("Do something fun to chill out out.");
 	}
 	
 	else if (stressLevel == 20)
@@ -90,8 +90,9 @@ void isFailing()
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("Sorry, but its over. You failed out. You spent too much time hanging out with friends and having a good time
-						than studying. Shoulda studied more. Re-apply in the fall.");
+		printf("Sorry, but its over. You failed out. You spent too much time hanging out with \n");
+		printf("friends and having a good time than studying. Shoulda studied more. \n");
+		printf("Re-apply in the fall.");
 		break;
 	}
 }

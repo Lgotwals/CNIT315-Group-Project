@@ -250,7 +250,7 @@ int intro()
 		printf("you can't remember your name... What is your name? \n");
 		scanf("%s", fName);
 		printf("Your name is: %s", fName);
-		printf("You look around and find that you are a student at Purdue,\n");
+		printf("\nYou look around and find that you are a student at Purdue,\n");
 		printf("you hope your memories return, you wander into the other room and \n"		);
 		printf("you decide to make the best of the end of the semster.\n");
 		printf("================================================================================");
@@ -265,7 +265,7 @@ int intro()
 		printf("What is your best friends name?\n");
 		scanf("%s", yourFriend);
 		printf("Your best friend's name is: %s", yourFriend);
-		printf("%s: Hi, %s, how was your weekend?", yourFriend, fName);
+		printf("\n%s: Hi, %s, how was your weekend?", yourFriend, fName);
 		printf("You think to yourself about how to respond to your friend, after all you \n");
 		printf("can't remember much about who you are...\n"); 
 		printf("You decide to tell your friend the following: \n");

@@ -8,10 +8,14 @@
 *
 *
 */
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
   //implement game
+  
+  intro();
   
   return 0;
 

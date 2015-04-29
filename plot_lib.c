@@ -39,21 +39,21 @@ void isStressed()
 	{
 		printf"Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("Warning stress level is high. You are breaking out all over your face and have trouble\n");
-		printf("sleeping.  Do something fun, and watch your choices or else.\n");
+		printf("Warning stress level is high. You are breaking out all over your face and have trouble sleeping. 
+						Do something fun, and watch your choices or else.");
 	}
 	
 	else if (stressLevel == 19)
 	{
 		printf"Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy.\n");
-		printf("Do something fun to chill out out.");
+		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy. Do 
+						something fun to chill out out.");
 	}
 	
 	else if (stressLevel == 20)
 	{
-		printf("You died. RIP.\n");	
+		printf("You died. RIP.")	
 		break;
 	}
 }
@@ -84,15 +84,14 @@ void isFailing()
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("WARNING:GPA very low. Do not let it get to 0 or you will fail out.");
+		printf("WARNING:GPA very low. Do not let it get to 0 or you will fail out.")
 	}
 	else if (GPA == 0.0)
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("Sorry, but its over. You failed out. You spent too much time hanging out with \n");
-		printf("friends and having a good time than studying. Shoulda studied more. \n");
-		printf("Re-apply in the fall.");
+		printf("Sorry, but its over. You failed out. You spent too much time hanging out with friends and having a good time
+						than studying. Shoulda studied more. Re-apply in the fall.");
 		break;
 	}
 }
@@ -226,10 +225,10 @@ void schoolday()
 	printf("================================================================================");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	printf("You go to your first class and learn about Spam and \n");	
-	printf("tak a quiz over DNS and email, you hope you did ok.");
+	printf("take a quiz over DNS and email, you hope you did ok.");
 	printf("After class you go to lunch and tell %s that", yourFriend);
 	printf("you can't remember who you are and that you need help\n");
-	printf("figureing out how to complete the semster without \n");
+	printf("figuring out how to complete the semster without \n");
 	printf("remembering who you are.\n");
 	printf("================================================================================");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -243,13 +242,66 @@ void watchmovie()
 {
 	printf("================================================================================");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	printf("Your friend asks if you want to go to the movies.\n");
-	printf("You currently feel ok about how you are doing in your classes and feel that \n");
-	printf("going to the movies is a great idea!\n");
-	printf("\t==~~~~~~~~~~~~~~~~~~~~==\t\n");
-	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
-	printf("Do you want to go to the movies with your frinend? (y/n)\n");
-	yesNo = (char*)getchar();
-	validateYN(yesNo);
 	//function for watching a movie and wasting time.
+}
+
+void party();
+void party()
+{
+	int choice;
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	printf("================================================================================");	
+	printf("Your phone buzzes in your pocket. You look at it and there's a text from %s ", yourFriend);
+	printf(".It says: Hey wanna go to a party this Friday night? My good friends on the"
+	printf("rugby team are having a party. You should come it will be fun.\n");
+	printf("You have a big exam Monday morning that you need to study for, so you're not");
+	printf(" sure if it would be a good idea to go out. What do you want to do?\n");
+	printf("1) Go to the party with %s.", yourFriend);
+	printf("2) Stay in and relax that night.");
+	printf("3) Stay in and study for your exam.");
+	scanf("%d", &choice);
+	if (choice == 1)
+	{
+		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		printf("================================================================================");	
+		printf("The party was really fun! You met a bunch of cool people, dancing all night,");
+		printf("sipped on drank, and just had a good ol time. The only bad part is that you");
+	  printf(" woke up at Saturday and couldn't do any work the whole day because of you")
+	  printf(" had a headplitting headache the rest of the day, from getting so dehydrated.");
+		stressLevel--;
+		GPA--;
+		isStressed();
+		isFailing();
+	}
+	else if (choice == 2)
+	{
+		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		printf("================================================================================");	
+		printf("You text your friend back and decline the invitation. Come Friday night you");
+		printf(" flip on Netflix, cuddle up in your snuggly blanket, just chill out and");
+		printf(" catch up on all those episodes of Trailer Park Boys you've missed. It was a");
+		printf(" good night.");
+		stressLevel--;
+		isStressed();
+		isFailing();
+	}
+	else if (choice == 3)
+	{
+		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		printf("================================================================================");	
+		printf("You text %s back and decline the invivation, apologizing saying that you really", yourFriend);
+		printf("need to study because you have a huge exam on Monday. Come Friday night you hit ");
+		printf("the books HARD. Going over the textbook, poweroint slides, old notes. After a
+						night of studying, you feel like you learned a lot and after studying more the 
+						rest of the weekend you dominate the exam. Good job!");
+		stressLevel++;
+		GPA++;
+		isStressed();
+		isFailing();
+	}
+	else
+	{
+		printf("Please enter 1, 2, or 3");	
+	}
+	}
 }

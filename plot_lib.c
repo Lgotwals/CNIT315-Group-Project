@@ -1,11 +1,20 @@
 //PLOT for game
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
+#include <stdlib.h>
 char yourFriend[50];
 char fName[50];
 int stressLevel;
-double GPA;
+double GPA, randMin, randMax, randNum;
 
+void RandonNum();
+void RandonNum()
+{
+	srand ( time(NULL) );
+	randNum = rand() % randMax + randMin;
+	return 0;
+}
 
 //validation functions
 int validateYN(char* variable);
@@ -295,8 +304,8 @@ void party()
 	int choice;
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	printf("================================================================================");	
-	printf("Your phone buzzes in your pocket. You look at it and there's a text from %s ", yourFriend);
-	printf(".It says: Hey wanna go to a party this Friday night? My good friends on the"
+	printf("Your phone buzzes in your pocket. You look at it and there's a text from %s.", yourFriend);
+	printf("It says: Hey wanna go to a party this Friday night? My good friends on the"
 	printf("rugby team are having a party. You should come it will be fun.\n");
 	printf("You have a big exam Monday morning that you need to study for, so you're not");
 	printf(" sure if it would be a good idea to go out. What do you want to do?\n");
@@ -312,8 +321,14 @@ void party()
 		printf("sipped on drank, and just had a good ol time. The only bad part is that you");
 	  printf(" woke up at Saturday and couldn't do any work the whole day because of you")
 	  printf(" had a headplitting headache the rest of the day, from getting so dehydrated.");
-		stressLevel--;
-		GPA--;
+		RandMin = 2;
+		RandMax = 5;
+		RandomNum()
+		stresslevel = stressLevel - randNum;
+		RandMin = 0.2;
+		RandMax = 0.5;
+		RandomNum()
+		GPA = GPA - randNum;
 		isStressed();
 		isFailing();
 	}
@@ -325,7 +340,14 @@ void party()
 		printf(" flip on Netflix, cuddle up in your snuggly blanket, just chill out and");
 		printf(" catch up on all those episodes of Trailer Park Boys you've missed. It was a");
 		printf(" good night.");
-		stressLevel--;
+		RandMin = 3;
+		RandMax = 4;
+		RandomNum()
+		stresslevel = stressLevel - randNum;
+		RandMin = 0.1;
+		RandMax = 0.4;
+		RandomNum()
+		GPA = GPA - randNum;
 		isStressed();
 		isFailing();
 	}
@@ -335,11 +357,15 @@ void party()
 		printf("================================================================================");	
 		printf("You text %s back and decline the invivation, apologizing saying that you really", yourFriend);
 		printf("need to study because you have a huge exam on Monday. Come Friday night you hit ");
-		printf("the books HARD. Going over the textbook, poweroint slides, old notes. After a
-						night of studying, you feel like you learned a lot and after studying more the 
-						rest of the weekend you dominate the exam. Good job!");
-		stressLevel++;
-		GPA++;
+		printf("the books HARD. Going over the textbook, poweroint slides, old notes. After a night of studying, you feel like you learned a lot and after studying more the rest of the weekend you dominate the exam. Good job!");
+		RandMin = 3;
+		RandMax = 4;
+		RandomNum()
+		stresslevel = stressLevel + randNum;
+		RandMin = 0.2;
+		RandMax = 0.4;
+		RandomNum()
+		GPA = GPA + randNum;
 		isStressed();
 		isFailing();
 	}

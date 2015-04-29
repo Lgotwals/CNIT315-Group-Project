@@ -39,16 +39,14 @@ void isStressed()
 	{
 		printf"Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("Warning stress level is high. You are breaking out all over your face and have trouble sleeping. 
-						Do something fun, and watch your choices or else.");
+		printf("Warning stress level is high. You are breaking out all over your face and have trouble sleeping. Do something fun, and watch your choices or else.");
 	}
 	
 	else if (stressLevel == 19)
 	{
 		printf"Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy. Do 
-						something fun to chill out out.");
+		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy. Do something fun to chill out.");
 	}
 	
 	else if (stressLevel == 20)
@@ -56,42 +54,88 @@ void isStressed()
 		printf("You died. RIP.")	
 		break;
 	}
+	else 
+	{
+		printf"Your current stress level is:");
+		printf("%d\n", stressLevel);
+	}
 }
 //Checks the GPA of student. Prints warning messages if it falls too low, eventually failing the student if their
 //GPA reaches 0, ending the game. 
 void isFailing();
 void isFailing()
 {
-	if (GPA == 1.8)
+	if (GPA > 3.7)
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("WARNING: GPA now below average C.");
+		printf("A, good job!");
 	}
-	else if (GPA == 1.4)
+	else if (GPA > 3.3)
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("WARNING: GPA is now D average");
+		printf("A-");
 	}
-	else if  (GPA == 1.0);
+	else if (GPA > 3)
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("WARNING: GPA is below D average");
+		printf("You have a B+");
 	}
-	else if(GPA == 0.4)
+	else if (GPA > 2.7)
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("WARNING:GPA very low. Do not let it get to 0 or you will fail out.")
+		printf("B");
+	}
+	else if (GPA > 2.3)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("B-");
+	}
+	else if (GPA > 2)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("C+, don't let yourself fall too far behind.");
+	}
+	else if (GPA > 1.7)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("C, don't let yourself fall too far behind.");
+	}
+	else if  (GPA > 1.3);
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("C-, don't let your grade drop too low.");
+	}
+	else if  (GPA > 1.0);
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("D+, try to improve your grade before it's too late.");
+	}
+	else if  (GPA > 0.7);
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("D, you're on the verge of failing improve your grades now!");
+	}
+	else if (GPA > 0.0)
+	{
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("D-, you're barely keeping a passing grade fix it while you still can")
 	}
 	else if (GPA == 0.0)
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("Sorry, but its over. You failed out. You spent too much time hanging out with friends and having a good time
-						than studying. Shoulda studied more. Re-apply in the fall.");
+		printf("Sorry, but its over. You failed out. You spent too much time hanging out with friends and having a good time than studying. Shoulda studied more. Re-apply in the fall.");
 		break;
 	}
 }

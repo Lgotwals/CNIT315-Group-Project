@@ -46,14 +46,14 @@ void isStressed()
 {
 	if (stressLevel == 17)
 	{
-		printf"Your current stress level is:");
+		printf("Your current stress level is:");
 		printf("%d\n", stressLevel);
 		printf("Warning stress level is high. You are breaking out all over your face and have trouble sleeping. Do something fun, and watch your choices or else.");
 	}
 	
 	else if (stressLevel == 19)
 	{
-		printf"Your current stress level is:");
+		printf("Your current stress level is:");
 		printf("%d\n", stressLevel);
 		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy. Do something fun to chill out.");
 	}

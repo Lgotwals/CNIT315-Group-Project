@@ -48,14 +48,16 @@ int isStressed()
 	{
 		printf("Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("Warning stress level is high. You are breaking out all over your face and have trouble sleeping. Do something fun, and watch your choices or else.");
+		printf("Warning stress level is high. You are breaking out all over your face and \n");
+		printf("have trouble sleeping. Do something fun, and watch your choices or else.");
 	}
 	
 	else if (stressLevel == 19)
 	{
 		printf("Your current stress level is:");
 		printf("%d\n", stressLevel);
-		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very twitchy. Do something fun to chill out.");
+		printf("WARNNG STRESS LEVELS ARE THROUGH THE ROOF. You are hallucinating and feel very\n");
+		printf("twitchy. Do something fun to chill out.");
 	}
 	
 	else if (stressLevel == 20)
@@ -146,7 +148,9 @@ int isFailing()
 	{
 		printf("Your current GPA is:");
 		printf("%f\n", GPA);
-		printf("Sorry, but its over. You failed out. You spent too much time hanging out with friends and having a good time than studying. Shoulda studied more. Re-apply in the fall.");
+		printf("Sorry, but its over. You failed out. You spent too much time hanging out with\n");
+		printf("friends and having a good time than studying. Shoulda studied more! \n");
+		printf("Re-apply in the fall.");
 		return 1;
 	}
 	return 0;
@@ -204,7 +208,7 @@ void playTGCs()
 	}
 	else if (tcg==3)
 	{
-		printf("Too much of a wimp to admit what you really enjoy in life\n");
+		printf("Too much of a wimp to admit what you really enjoy in life?\n");
 		printf("Or do you finally realize how important your finals are?\n");
 		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		printf("================================================================================");
@@ -358,7 +362,9 @@ void party()
 		printf("================================================================================");	
 		printf("You text %s back and decline the invivation, apologizing saying that you really", yourFriend);
 		printf("need to study because you have a huge exam on Monday. Come Friday night you hit ");
-		printf("the books HARD. Going over the textbook, poweroint slides, old notes. After a night of studying, you feel like you learned a lot and after studying more the rest of the weekend you dominate the exam. Good job!");
+		printf("the books HARD. Going over the textbook, poweroint slides, old notes. After \n");
+		printf("a night of studying, you feel like you learned a lot and after studying more\n");
+		printf("the rest of the weekend you dominate the exam. Good job!");
 		randMin = 3;
 		randMax = 4;
 		randomNum();

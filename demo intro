@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+
+#include <stdlib.h>
+
+
+int main()
+{
+char yourFriend[50];
+char fName[50];
+printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+printf("================================================================================");
+printf("You woke up this morning and you don't feel good at all, \n");
+printf("you can't remember your name... What is your name? \n");
+scanf("%s", fName);
+printf("Your name is: %s", fName);
+printf("You look around and fine that you are a student at Purdue,\n");
+printf("you hope your memories return, you wander into the other room and \n"		);
+printf("you decide to make the best of the end of the semster.\n");
+printf("================================================================================");
+printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+printf("\n\n");
+printf("You are beginning to regain your memories, you find that you are a CIT student,\n");
+printf(" and that you have a ton of projects and exams to take before you can go home.\n");
+
+printf("================================================================================");
+printf("You decide to make the most of the day and go to class!");
+printf("You meet your best friend on your way to class, their name is...\n");
+printf("What is your best friends name?\n");
+scanf("%s", yourFriend);
+printf("Your best friend's name is: %s", yourFriend);
+printf("%s: Hi, %s, how was your weekend?", yourFriend, fName);
+printf("You think to yourself about how to respond to your friend, after all you \n");
+printf("can't remember much about who you are...\n"); 
+printf("You decide to tell your friend the following: \n");
+printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
+printf("1) SAY: Hi, %s, I'm fine I just had a rough night is all.\n", yourFriend); 
+printf("2) SAY: Who are you again?  Do I know you?\n");
+printf("3) SAY: Looks like it's time to go to school!\n");
+return 0;
+}

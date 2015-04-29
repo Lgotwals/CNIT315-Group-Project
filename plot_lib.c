@@ -250,7 +250,7 @@ int intro()
 		printf("you can't remember your name... What is your name? \n");
 		scanf("%s", fName);
 		printf("Your name is: %s", fName);
-		printf("You look around and fine that you are a student at Purdue,\n");
+		printf("You look around and find that you are a student at Purdue,\n");
 		printf("you hope your memories return, you wander into the other room and \n"		);
 		printf("you decide to make the best of the end of the semster.\n");
 		printf("================================================================================");

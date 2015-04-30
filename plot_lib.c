@@ -3,16 +3,19 @@
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
+
 char yourFriend[50];
 char fName[50];
 int stressLevel;
 double GPA, randMin, randMax, randNum;
 
-void randomNum();
-void randomNum()
+void randomNum(double, double);
+void randomNum(double min, double max)
 {
 	srand ( time(NULL) );
-	randNum = rand() % randMax + randMin;
+	float ran = (double) rand() / (double) max;
+	randNum = min - max;
+	randNum *= ran;
 }
 
 //validation functions
@@ -214,7 +217,7 @@ void playTGCs()
 		printf("================================================================================");
 
 	}
-	else (tcg!=3)
+	else if (tcg!=3)
 	{
 		printf("Choose again from the choices listed!");
 		scanf("%d", &tcg);
@@ -250,7 +253,7 @@ int intro()
 		printf("you can't remember your name... What is your name? \n");
 		scanf("%s", fName);
 		printf("Your name is: %s", fName);
-		printf("\nYou look around and find that you are a student at Purdue,\n");
+		printf("You look around and fine that you are a student at Purdue,\n");
 		printf("you hope your memories return, you wander into the other room and \n"		);
 		printf("you decide to make the best of the end of the semster.\n");
 		printf("================================================================================");
@@ -265,7 +268,7 @@ int intro()
 		printf("What is your best friends name?\n");
 		scanf("%s", yourFriend);
 		printf("Your best friend's name is: %s", yourFriend);
-		printf("\n%s: Hi, %s, how was your weekend?", yourFriend, fName);
+		printf("%s: Hi, %s, how was your weekend?", yourFriend, fName);
 		printf("You think to yourself about how to respond to your friend, after all you \n");
 		printf("can't remember much about who you are...\n"); 
 		printf("You decide to tell your friend the following: \n");
@@ -328,11 +331,11 @@ void party()
 	  printf(" had a headplitting headache the rest of the day, from getting so dehydrated.");
 		randMin = 2;
 		randMax = 5;
-		randomNum();
+		randomNum(randMin, randMax);
 		stressLevel = stressLevel - randNum;
 		randMin = 0.2;
 		randMax = 0.5;
-		randomNum();
+		randomNum(randMin, randMax);
 		GPA = GPA - randNum;
 		isStressed();
 		isFailing();
@@ -347,11 +350,11 @@ void party()
 		printf(" good night.");
 		randMin = 3;
 		randMax = 4;
-		randomNum;
+		randomNum(randMin, randMax);
 		stressLevel = stressLevel - randNum;
 		randMin = 0.1;
 		randMax = 0.4;
-		randomNum();
+		randomNum(randMin, randMax);
 		GPA = GPA - randNum;
 		isStressed();
 		isFailing();
@@ -367,11 +370,11 @@ void party()
 		printf("the rest of the weekend you dominate the exam. Good job!");
 		randMin = 3;
 		randMax = 4;
-		randomNum();
+		randomNum(randMin, randMax);
 		stressLevel = stressLevel + randNum;
 		randMin = 0.2;
 		randMax = 0.4;
-		randomNum();
+		randomNum(randMin, randMax);
 		GPA = GPA + randNum;
 		isStressed();
 		isFailing();

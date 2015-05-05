@@ -303,6 +303,20 @@ void watchmovie()
 {
 	printf("================================================================================\n");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("The next and greatest new superhero movie just released and %s wants you to go\n", yourFriend);
+	printf("%s even offered to pay for it all and make sure you got some popcorn too.\n");
+	printf("you think to yourself that this is a pretty good deal, don't have to pay for\n");
+	printf("a ticket and get popocorn.  Not to mention getting ot chat with your \n");
+	printf("friends about the movie later.\n");
+	printf("\t==~~~~~~~~~~~~~~~~~~~~==\t\n");
+	printf("You have to decide if you want to go and watch the movie so you can later talk\n");
+	printf("about it with all of your friends or if you want to stay home and finsih up \n");
+	printf("your part of a group project and study some more for your exams.\n");
+	printf("================================================================================\n");
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
+	printf("Do you want to go to the movies with %s? (y/n)\n", yourFriend);
+	
 	//function for watching a movie and wasting time.
 }
 

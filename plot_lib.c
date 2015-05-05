@@ -316,7 +316,8 @@ void watchmovie()
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
 	printf("Do you want to go to the movies with %s? (y/n)\n", yourFriend);
-	
+	yesNo = (char*)getchar();
+	validateYN(yesNo);
 	//function for watching a movie and wasting time.
 }
 

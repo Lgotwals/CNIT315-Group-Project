@@ -8,8 +8,8 @@ int main()
 {
 char yourFriend[50];
 char fName[50];
-printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-printf("================================================================================");
+printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+printf("================================================================================\n");
 printf("You woke up this morning and you don't feel good at all, \n");
 printf("you can't remember your name... What is your name? \n");
 scanf("%s", fName);
@@ -17,14 +17,14 @@ printf("Your name is: %s", fName);
 printf("You look around and fine that you are a student at Purdue,\n");
 printf("you hope your memories return, you wander into the other room and \n"		);
 printf("you decide to make the best of the end of the semster.\n");
-printf("================================================================================");
-printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+printf("================================================================================\n");
+printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 printf("\n\n");
 printf("You are beginning to regain your memories, you find that you are a CIT student,\n");
 printf(" and that you have a ton of projects and exams to take before you can go home.\n");
 
-printf("================================================================================");
-printf("You decide to make the most of the day and go to class!");
+printf("================================================================================\n");
+printf("You decide to make the most of the day and go to class!\n");
 printf("You meet your best friend on your way to class, their name is...\n");
 printf("What is your best friends name?\n");
 scanf("%s", yourFriend);

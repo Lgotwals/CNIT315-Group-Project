@@ -19,15 +19,17 @@ void randomNum(double min, double max)
 }
 
 //validation functions
-int validateYN(char* variable);
-int validateYN(char* variable)
+int validateYN(int);
+int validateYN(int variable)
 { 
-	while(strcmp(variable, "y") == 1 || strcmp(variable, "n") == 1)
+	while(variable != 1 && variable != 0)
 	{
-		printf("Reenter your choice only \"y\" and \"n\" are allowed here!\n");
+		printf("Reenter your choice only \"0\" and \"1\" are allowed here!\n");
+		printf("Enter 0 for Yes, 1 for No: ");
+		scanf("%d", &variable);
 	}
 	
-	return 0;
+	return variable;
 }
 
 void validateNums(int variable);
@@ -228,7 +230,7 @@ void playTGCs()
 void socialclubEvent();
 void socialclubEvent()
 {
-	char *yesNo;
+	int yesNo;
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	printf("================================================================================");
 	printf("Today you have a social meeting for your favorite club, it is a different kind \n");
@@ -237,8 +239,8 @@ void socialclubEvent()
 	printf("You can choose to either go to your club meeting or to go home and study.\n");
 	printf("\t==~~~~~~~~~~~~~~~~~~~~==\t\n");
 	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
-	printf("Do you want to go to your club meeting and have fun with your friends? (y/n)\n");
-	yesNo = (char*)getchar();
+	printf("Do you want to go to your club meeting and have fun with your friends? (0 for Yes, 1 for No)\n");
+	scanf("%d", &yesNo);
 	validateYN(yesNo);
 	//printf("Go home and study!\n");
 }
@@ -252,8 +254,8 @@ int intro()
 		printf("You woke up this morning and you don't feel good at all, \n");
 		printf("you can't remember your name... What is your name? \n");
 		scanf("%s", fName);
-		printf("Your name is: %s", fName);
-		printf("You look around and fine that you are a student at Purdue,\n");
+		printf("Your name is: %s\n", fName);
+		printf("You look around and find that you are a student at Purdue,\n");
 		printf("you hope your memories return, you wander into the other room and \n"		);
 		printf("you decide to make the best of the end of the semster.\n");
 		printf("================================================================================\n");
@@ -267,8 +269,8 @@ int intro()
 		printf("You meet your best friend on your way to class, their name is...\n");
 		printf("What is your best friends name?\n");
 		scanf("%s", yourFriend);
-		printf("Your best friend's name is: %s", yourFriend);
-		printf("%s: Hi, %s, how was your weekend?", yourFriend, fName);
+		printf("Your best friend's name is: %s\n", yourFriend);
+		printf("%s: Hi, %s, how was your weekend? ", yourFriend, fName);
 		printf("You think to yourself about how to respond to your friend, after all you \n");
 		printf("can't remember much about who you are...\n"); 
 		printf("You decide to tell your friend the following: \n");
@@ -301,10 +303,11 @@ void schoolday()
 void watchmovie();
 void watchmovie()
 {
+	int yesNo;
 	printf("================================================================================\n");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("The next and greatest new superhero movie just released and %s wants you to go\n", yourFriend);
-	printf("%s even offered to pay for it all and make sure you got some popcorn too.\n");
+	printf("%s even offered to pay for it all and make sure you got some popcorn too.\n", yourFriend);
 	printf("you think to yourself that this is a pretty good deal, don't have to pay for\n");
 	printf("a ticket and get popocorn.  Not to mention getting ot chat with your \n");
 	printf("friends about the movie later.\n");
@@ -315,8 +318,8 @@ void watchmovie()
 	printf("================================================================================\n");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
-	printf("Do you want to go to the movies with %s? (y/n)\n", yourFriend);
-	yesNo = (char*)getchar();
+	printf("Do you want to go to the movies with %s? (0 for Yes, 1 for No)\n", yourFriend);
+	scanf("%d", &yesNo);
 	validateYN(yesNo);
 	//function for watching a movie and wasting time.
 }
@@ -413,8 +416,8 @@ void goToBars()
 	printf(" to buy him lots of drink, and you should definitely take him to Harry's for the\n");
 	printf(" one and only birthday shot! You're not sure if you should be out too late though.\n");
 	printf(" His birthday is Thursday night, and you have an 8:30am class on Friday. What do you\n");
-	printf(" want to do?\n1)Go to the bars, YOLO.\n2)Stay in and get a good nights rest.\n");
-	scanf("%d", choice);
+	printf("What do you want to do?\n1)Go to the bars, YOLO.\n2)Stay in and get a good nights rest.\n");
+	scanf("%d", &choice);
 	
 	if (choice == 1)
 	{
@@ -448,7 +451,7 @@ void goToBars()
 		printf("You wish your group member a happy birthday, but let him know you can't make it \n");
 		printf("out to the bars that night. It is important to make it to your 8:30am class, the \n");
 		printf("professor always has attendance quizzes. Your group member seems dissapointed, so\n");
-		printf("you reassure him you will go bar hopping with him some other time.\n")
+		printf("you reassure him you will go bar hopping with him some other time.\n");
 		randMin = 3;
 		randMax = 4;
 		randomNum(randMin, randMax);
@@ -467,3 +470,64 @@ void goToBars()
 	}
 }
 
+void oneDay();
+void oneDay(int dayNumber)
+{
+	int randomEvent;
+	randomEvent = rand() % 5;
+
+		if (dayNumber % 7  == 1)
+		{
+			printf("It's Monday... =/\n");
+		}
+		else if (dayNumber % 7 == 2)
+		{
+			printf("It's Tuesday.\n");
+		}
+		else if (dayNumber % 7 == 3)
+		{
+			printf("It's Wednesday.\n");
+		}
+		else if (dayNumber % 7 == 4)
+		{
+			printf("It's Thursday.\n");
+		}
+		else if (dayNumber % 7 == 5)
+		{
+			printf("It's Friday!!!!\n");
+		}
+		else if (dayNumber % 7 == 6)
+		{
+			printf("It's Saturday!!!!\n");
+		}
+		else if (dayNumber % 7 == 0)
+		{
+			printf("It's Sunday!!\n");
+		}
+		
+		if (dayNumber % 7 < 6)
+		{
+			schoolday();
+		}
+		
+		switch (randomEvent)
+		{
+			case 0:
+				party();
+				break;
+			case 1:
+				watchmovie();
+				break;
+			case 2:
+				playTGCs();
+				break;
+			case 3:
+				socialclubEvent();
+				break;
+			case 4:
+				goToBars();
+				break;
+		}
+
+	return;
+}

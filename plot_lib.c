@@ -183,12 +183,12 @@ void playTGCs()
 	printf("Either way %s has decided to support you with your unproductive choices!\n", yourFriend);
 	printf("What a great friend...\n");
 	printf("\t==~~~~~~~~~~~~~~~~~~~~==\t\n");
-	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
+	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n");
 	printf("1) Play the children's card game go out to the grocery store and buy cards and \n");
 	printf("spend three hours to complete this task\n");
 	printf("2) Watch the television show associated with the card game, spend up to fours \n");
 	printf("hours completing this task\n");
-	printf("3) Do nothing because you don't want to admit being obsessed with the children's \n");
+	printf("3) Do nothing because you don't want to admit being obsessed with the children's\n");
 	printf("card game!\n");
 	scanf("%d", &tcg);
 	printf("You Picked %d", tcg);
@@ -197,7 +197,7 @@ void playTGCs()
 	if (tcg == 1)
 	{
 		printf("You spent three hours palying a children's card game when you \n");
-		printf("should have been studying!");
+		printf("should have been studying!\n");
 		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 		printf("================================================================================\n");
 
@@ -206,7 +206,7 @@ void playTGCs()
 	{
 		printf("Your stress level did decrease because you watched television but \n");
 		printf("you also lost four hours of your day that could have been spent\n");
-		printf("more productively.");
+		printf("more productively.\n");
 		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 		printf("================================================================================\n");
 
@@ -215,6 +215,7 @@ void playTGCs()
 	{
 		printf("Too much of a wimp to admit what you really enjoy in life?\n");
 		printf("Or do you finally realize how important your finals are?\n");
+		printf("At least you were able to do some chores and study for exams instead.\n");
 		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 		printf("================================================================================\n");
 
@@ -238,8 +239,9 @@ void socialclubEvent()
 	printf("You also have an important exam tomorrow, and need to decide what you want to do.\n");
 	printf("You can choose to either go to your club meeting or to go home and study.\n");
 	printf("\t==~~~~~~~~~~~~~~~~~~~~==\t\n");
-	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
-	printf("Do you want to go to your club meeting and have fun with your friends? (0 for Yes, 1 for No)\n");
+	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n");
+	printf("Do you want to go to your club meeting and have fun with your friends?\n");
+	printf("(0 for Yes, 1 for No)\n");
 	scanf("%d", &yesNo);
 	validateYN(yesNo);
 	//printf("Go home and study!\n");
@@ -264,7 +266,7 @@ int intro()
 		printf("You are beginning to regain your memories, you find that you are a CIT student,\n");
 		printf(" and that you have a ton of projects and exams to take before you can go home.\n");
 		
-		printf("================================================================================");
+		printf("================================================================================\n");
 		printf("You decide to make the most of the day and go to class!");
 		printf("You meet your best friend on your way to class, their name is...\n");
 		printf("What is your best friends name?\n");
@@ -317,7 +319,7 @@ void watchmovie()
 	printf("your part of a group project and study some more for your exams.\n");
 	printf("================================================================================\n");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n\n");
+	printf("MAKE YOUR CHOICE, CHOOSE WISELY!\n");
 	printf("Do you want to go to the movies with %s? (0 for Yes, 1 for No)\n", yourFriend);
 	scanf("%d", &yesNo);
 	validateYN(yesNo);
@@ -446,8 +448,8 @@ void goToBars()
 	}
 	else if (choice ==2)
 	{
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		printf("================================================================================");
+		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+		printf("================================================================================\n");
 		printf("You wish your group member a happy birthday, but let him know you can't make it \n");
 		printf("out to the bars that night. It is important to make it to your 8:30am class, the \n");
 		printf("professor always has attendance quizzes. Your group member seems dissapointed, so\n");

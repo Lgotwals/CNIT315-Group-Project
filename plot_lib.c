@@ -291,7 +291,7 @@ void schoolday()
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("You go to your first class and learn about Spam and \n");	
 	printf("take a quiz over DNS and email, you hope you did ok.\n");
-	printf("After class you go to lunch and tell %s that", yourFriend);
+	printf("After class you go to lunch and tell %s that\n", yourFriend);
 	printf("you can't remember who you are and that you need help\n");
 	printf("figuring out how to complete the semster without \n");
 	printf("remembering who you are.\n");

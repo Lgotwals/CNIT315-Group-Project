@@ -191,7 +191,7 @@ void playTGCs()
 	printf("3) Do nothing because you don't want to admit being obsessed with the children's\n");
 	printf("card game!\n");
 	scanf("%d", &tcg);
-	printf("You Picked %d", tcg);
+	printf("You Picked %d \n", tcg);
 	printf("================================================================================\n");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	if (tcg == 1)

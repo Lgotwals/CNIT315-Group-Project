@@ -298,7 +298,7 @@ void schoolday()
 	printf("================================================================================\n");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("You go back to your dorm and decide to take a break before dinner.\n");
-	printf("\n\n");
+	printf("\n");
 	//printf("%s"); 
 }
   

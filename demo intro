@@ -19,12 +19,12 @@ printf("you hope your memories return, you wander into the other room and \n"		)
 printf("you decide to make the best of the end of the semster.\n");
 printf("================================================================================\n");
 printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-printf("\n\n");
+printf("\n");
 printf("You are beginning to regain your memories, you find that you are a CIT student,\n");
 printf(" and that you have a ton of projects and exams to take before you can go home.\n");
 
 printf("================================================================================\n");
-printf("You decide to make the most of the day and go to class!\n");
+printf("You decide to make the most of the day and go to class!  \n");
 printf("You meet your best friend on your way to class, their name is...\n");
 printf("What is your best friends name?\n");
 scanf("%s", yourFriend);

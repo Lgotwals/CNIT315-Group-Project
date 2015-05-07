@@ -447,7 +447,7 @@ void party()
 			printf("1) Go to the party with %s.\n", yourFriend);
 			printf("2) Stay in and relax that night.\n");
 			printf("3) Stay in and study for your exam.\n");
-			scanf("%d", choice);
+			scanf("%d", &choice);
 		}
 	}
 }
@@ -518,7 +518,7 @@ void goToBars()
 		{
 			printf("Please enter 1 or 2.\n");
 			printf("1)Go to the bars, YOLO.\n2)Stay in and get a good nights rest.\n");
-			scanf("%d", choice);
+			scanf("%d", &choice);
 		}
 	}
 }
@@ -534,7 +534,7 @@ void sleepIn()
 	printf(" pretty late. Press snooze on the alarm or get up and start your day?\n");
 	printf("1)Snooze your alarm.\n");
 	printf("2)Get up and start your day.\n");
-	scanf("%d\n", choice);
+	scanf("%d", &choice);
 	while (continueMenu == 0)
 	{
 		randMin = 1;
@@ -632,16 +632,104 @@ void sleepIn()
 			printf("Please enter either 1 or 2.\n");
 			printf("1)Snooze your alarm.\n");
 			printf("2)Get up and start your day.\n");
-			scanf("%d", choice);
+			scanf("%d", &choice);
 		}
 	}
 
 }
+
+void goToSportingEvent();
+void goToSportingEvent()
+{
+	int choice;
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("================================================================================\n");
+	printf("You find out that Purdue is playing IU tonight and %s wants to go.\n", yourFriend);
+	printf("You have 3 quizzes tomorrow and a paper that you have not started yet.\n");
+	printf("You can go to the game and stay up late finishing your work, stay until\nhalf time, or you can just miss the game and ask %s about the game.", yourFriend);
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("================================================================================\n");
+	do
+	{
+		printf("MAKE YOUR CHOICE, CHOOSE WISELY\n");
+		printf("1. Go to the game and stay up late.\n");
+		printf("2. Go to the game but only stay until half-time.\n");
+		printf("3. Go to the game and don't do your homework.\n");
+		printf("4. Don't go to the game and finish your work.\n");
+		scanf("%d", &choice);
+		
+		if (choice == 1)
+		{
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");
+			printf("You go to the game and enjoy yourself very much.\n");
+			printf("However, because of the 3OT, you did not come home until very late.\n");
+			printf("Because of this, you had to pull an all-nighter and did not get any sleep.\n");
+			printf("But you did finish your homework.\n");
+			randMin = 1;
+			randMax = 5;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel + randNum;
+			randMin = 0.1;
+			randMax = 0.2;
+			randomNum(randMin, randMax);
+			GPA = GPA + randNum;
+		}
+		else if (choice == 2)
+		{
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");
+			printf("You enjoyed an good first half of the game even though\n");
+			printf("Purdue was losing when you left.\n");
+			printf("Despite this, you were able to finish all your homework\n");
+			printf("and get a good night's sleep.\n");
+			randMin = 0;
+			randMax = 2;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.1;
+			randMax = 0.2;
+			randomNum(randMin, randMax);
+			GPA = GPA + randNum;
+		}
+		else if (choice == 3)
+		{
+			printf("That game was AWESOME. Purdue destroyed IU. The game\n");
+			printf("was exciting from beginning to end. However, you\n");
+			printf("did not do your homework.\n");
+			randMin = 4;
+			randMax = 7;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.1;
+			randMax = 0.4;
+			randomNum(randMin, randMax);
+			GPA = GPA - randNum;
+		}
+		else if (choice == 4)
+		{
+			printf("You missed a great game but you finished all your homework\n");
+			printf("and was able to catch up on sleep and read.\n");
+			randMin = 0;
+			randMax = 1;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.1;
+			randMax = 0.3;
+			randomNum(randMin, randMax);
+			GPA = GPA + randNum;
+		}
+	} while (choice > 0 && choice < 5);
+	
+	isStressed();
+	isFailing();
+}
+
 void oneDay();
 void oneDay(int dayNumber)
 {
 	int randomEvent;
-	randomEvent = rand() % 5;
+	randomEvent = rand() % 7;
 
 		if (dayNumber % 7  == 1)
 		{
@@ -672,11 +760,20 @@ void oneDay(int dayNumber)
 			printf("It's Sunday!!\n");
 		}
 		
-		if (dayNumber % 7 < 6)
+		if (randomEvent == 6)
 		{
-			schoolday();
+			sleepIn();
+			randomEvent = rand() % 6;
 		}
 		
+		else
+		{		
+			if (dayNumber % 7 < 6)
+			{
+				schoolday();
+			}
+		}
+			
 		switch (randomEvent)
 		{
 			case 0:
@@ -695,7 +792,7 @@ void oneDay(int dayNumber)
 				goToBars();
 				break;
 			case 5:
-				sleepIn();
+				goToSportingEvent();
 				break;
 		}
 

@@ -308,7 +308,7 @@ int intro()
 		printf("What is your best friends name?\n");
 		scanf("%s", yourFriend);
 		printf("Your best friend's name is: %s\n", yourFriend);
-		printf("%s: Hi, %s, how was your weekend? ", yourFriend, fName);
+		printf("%s: Hi, %s, how was your weekend?\n", yourFriend, fName);
 		printf("You think to yourself about how to respond to your friend, after all you \n");
 		printf("can't remember much about who you are...\n"); 
 		printf("You decide to tell your friend the following: \n");
@@ -369,11 +369,11 @@ void party()
 	continueMenu = 0;
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("================================================================================\n");	
-	printf("Your phone buzzes in your pocket. You look at it and there's a text from %s.", yourFriend);
+	printf("Your phone buzzes in your pocket. You look at it and there's a text from %s.\n", yourFriend);
 	printf("It says: Hey wanna go to a party this Friday night? My good friends on the\n");
 	printf("rugby team are having a party. You should come it will be fun.\n");
 	printf("You have a big exam Monday morning that you need to study for, so you're not\n");
-	printf(" sure if it would be a good idea to go out. What do you want to do?\n");
+	printf("sure if it would be a good idea to go out. What do you want to do?\n");
 	printf("1) Go to the party with %s.\n", yourFriend);
 	printf("2) Stay in and relax that night.\n");
 	printf("3) Stay in and study for your exam.\n");
@@ -386,8 +386,8 @@ void party()
 			printf("================================================================================\n");	
 			printf("The party was really fun! You met a bunch of cool people, dancing all night,\n");
 			printf("sipped on drank, and just had a good ol time. The only bad part is that you\n");
-		  printf(" woke up at Saturday and couldn't do any work the whole day because of you\n");
-		  printf(" had a headplitting headache the rest of the day, from getting so dehydrated.\n");
+		  printf("woke up at Saturday and couldn't do any work the whole day because of you\n");
+		  printf("had a headplitting headache the rest of the day, from getting so dehydrated.\n");
 			randMin = 2;
 			randMax = 5;
 			randomNum(randMin, randMax);
@@ -405,9 +405,9 @@ void party()
 			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 			printf("================================================================================\n");	
 			printf("You text your friend back and decline the invitation. Come Friday night you\n");
-			printf(" flip on Netflix, cuddle up in your snuggly blanket, just chill out and\n");
-			printf(" catch up on all those episodes of Trailer Park Boys you've missed. It was a\n");
-			printf(" good night.\n");
+			printf("flip on Netflix, cuddle up in your snuggly blanket, just chill out and\n");
+			printf("catch up on all those episodes of Trailer Park Boys you've missed. It was a\n");
+			printf("good night.\n");
 			randMin = 3;
 			randMax = 4;
 			randomNum(randMin, randMax);
@@ -444,6 +444,10 @@ void party()
 		else
 		{
 			printf("Please enter 1, 2, or 3");
+			printf("1) Go to the party with %s.\n", yourFriend);
+			printf("2) Stay in and relax that night.\n");
+			printf("3) Stay in and study for your exam.\n");
+			scanf("%d", choice);
 		}
 	}
 }
@@ -513,10 +517,126 @@ void goToBars()
 		else
 		{
 			printf("Please enter 1 or 2.\n");
+			printf("1)Go to the bars, YOLO.\n2)Stay in and get a good nights rest.\n");
+			scanf("%d", choice);
 		}
 	}
 }
+void sleepIn();
+void sleepIn()
+{
+	int choice, continueMenu;
+	continueMenu = 0;
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("================================================================================\n");	
+	printf("BEEP BEEP BEEP. Your beside alarm wakes you up. You feel so tired. You barely\n");
+	printF("got any sleep the night before, and stayed up last night working on homework\n");
+	printf(" pretty late. Press snooze on the alarm or get up and start your day?\n");
+	printf("1)Snooze your alarm.\n");
+	printf("2)Get up and start your day.\n");
+	scanf("%d\n", choice);
+	while (continueMenu == 0)
+	{
+		randMin = 1;
+		randMax = 2;
+		randomNum(randMin, randMax);
+		if (choice == 1)
+		{
+			if (randNum == 1)
+			{
+				printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+				printf("================================================================================\n");
+				printf("You press snooze on your alarm and go back to sleep. You have the most fantastic\n");
+				printf(" dream about getting a perfect on an exam. Until you wake up and realize that\n");
+				printf("would never happen ever because you go to Purdue University. You glance at the\n");
+				printf("time and realize you missed your first class. Oh well, atleast you're rested!\n");
+				randMin = 1;
+				randMax = 4;
+				randomNum(randMin, randMax);
+				stressLevel = stressLevel - randNum;
+				randMin = 0.1;
+				randMax = 0.4;
+				randomNum(randMin, randMax);
+				GPA = GPA - randNum;
+				isStressed();
+				isFailing();
+				continueMenu = 1;
+			}
+			else
+			{
+				if (randNum == 1)
+				{
+					printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+					printf("================================================================================\n");
+					printf("After sleeping some more you wake up feeling refreshed, and ready to make the\n");
+					printf("most of your day. You open the curtains and the sun is shining, birds singing.\n");
+					printf("That extra sleep was all you needed to feel healthy and happy.\n");
+					randMin = 1;
+					randMax = 4;
+					randomNum(randMin, randMax);
+					stressLevel = stressLevel - randNum;
+					isStressed();
+					isFailing();
+					continueMenu = 1;
+				}
+			}
+		}
+		else if (choice == 2)
+		{
+			randMin = 1;
+			randMax = 2;
+			randomNum(randMin, randMax);
+			if (randNum == 1)
+			{
+				printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+				printf("================================================================================\n");
+				printf("You drag yourself out of bed. Its a real struggle. You take a quick shower to\n");
+				prinntf("wake up. You make yourself breakfast, then head out to class. Good thing you\n");
+				printf("didn't skip class, your professor is having an attendance quiz worth 10 extra\n");
+				printf("credit points. Those are points you need!\n");
+				randMin = 1;
+				randMax = 3;
+				randomNum(randMin, randMax);
+				stressLevel = stressLevel + randNum;
+				randMin = 0.1;
+				randMax = 0.4;
+				randomNum(randMin, randMax);
+				GPA = GPA + randNum;
+				isStressed();
+				isFailing();
+				continueMenu = 1;
+			}
+			else
+			{
+				printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+				printf("================================================================================\n");
+				printf("You rise from your bed and feel very groggy. It is hard to wake up and clear the\n");
+				prinntf("fog from your sleep. Lately you've been having very strange dreams, dreams\n");
+				printf("about your identity. You try and grasp onto the details from your dreams, hoping\n");
+				printf("that they may provide clues about who you are, but your memory fails you and the\n")
+				printf("dreams blow away, far beyond the grasp of your mind.\nYou head off to your first\n");
+				printf("class. Halfway through the powerhour, you fall asleep in your desk. You wake up\n");
+				printf("20 minutes later. There's a pool of drool on your textbook and your professor is\n");
+				printf("giving you a very dirty look. Oops.\n")
+				randMin = 1;
+				randMax = 3;
+				randomNum(randMin, randMax);
+				stressLevel = stressLevel + randNum;
+				isStressed();
+				isFailing();
+				continueMenu = 1;
+			}
+		}
+		else
+		{
+			printf("Please enter either 1 or 2.\n");
+			printf("1)Snooze your alarm.\n");
+			printf("2)Get up and start your day.\n");
+			scanf("%d", choice);
+		}
+	}
 
+}
 void oneDay();
 void oneDay(int dayNumber)
 {
@@ -573,6 +693,9 @@ void oneDay(int dayNumber)
 				break;
 			case 4:
 				goToBars();
+				break;
+			case 5:
+				sleepIn();
 				break;
 		}
 

@@ -530,7 +530,7 @@ void sleepIn()
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("================================================================================\n");	
 	printf("BEEP BEEP BEEP. Your beside alarm wakes you up. You feel so tired. You barely\n");
-	printF("got any sleep the night before, and stayed up last night working on homework\n");
+	printf("got any sleep the night before, and stayed up last night working on homework\n");
 	printf(" pretty late. Press snooze on the alarm or get up and start your day?\n");
 	printf("1)Snooze your alarm.\n");
 	printf("2)Get up and start your day.\n");
@@ -591,7 +591,7 @@ void sleepIn()
 				printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 				printf("================================================================================\n");
 				printf("You drag yourself out of bed. Its a real struggle. You take a quick shower to\n");
-				prinntf("wake up. You make yourself breakfast, then head out to class. Good thing you\n");
+				printf("wake up. You make yourself breakfast, then head out to class. Good thing you\n");
 				printf("didn't skip class, your professor is having an attendance quiz worth 10 extra\n");
 				printf("credit points. Those are points you need!\n");
 				randMin = 1;
@@ -611,13 +611,13 @@ void sleepIn()
 				printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 				printf("================================================================================\n");
 				printf("You rise from your bed and feel very groggy. It is hard to wake up and clear the\n");
-				prinntf("fog from your sleep. Lately you've been having very strange dreams, dreams\n");
+				printf("fog from your sleep. Lately you've been having very strange dreams, dreams\n");
 				printf("about your identity. You try and grasp onto the details from your dreams, hoping\n");
-				printf("that they may provide clues about who you are, but your memory fails you and the\n")
+				printf("that they may provide clues about who you are, but your memory fails you and the\n");
 				printf("dreams blow away, far beyond the grasp of your mind.\nYou head off to your first\n");
 				printf("class. Halfway through the powerhour, you fall asleep in your desk. You wake up\n");
 				printf("20 minutes later. There's a pool of drool on your textbook and your professor is\n");
-				printf("giving you a very dirty look. Oops.\n")
+				printf("giving you a very dirty look. Oops.\n");
 				randMin = 1;
 				randMax = 3;
 				randomNum(randMin, randMax);

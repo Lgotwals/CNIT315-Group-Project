@@ -452,7 +452,7 @@ void goToBars();
 void goToBars()
 {
 	int choice, continueMenu;
-	menuChoice = 0;
+	continueMenu = 0;
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("================================================================================\n");	
 	printf("One of your group members for a project in your databases class is turing 21! He\n");

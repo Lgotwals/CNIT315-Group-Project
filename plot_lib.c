@@ -451,7 +451,7 @@ void party()
 void goToBars();
 void goToBars()
 {
-	int choice, menuChoice;
+	int choice, continueMenu;
 	menuChoice = 0;
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("================================================================================\n");	
@@ -462,7 +462,7 @@ void goToBars()
 	printf(" His birthday is Thursday night, and you have an 8:30am class on Friday. What do you\n");
 	printf("What do you want to do?\n1)Go to the bars, YOLO.\n2)Stay in and get a good nights rest.\n");
 	scanf("%d", &choice);
-	while (menuChoice == 0)
+	while (continueMenu == 0)
 	{
 		if (choice == 1)
 		{

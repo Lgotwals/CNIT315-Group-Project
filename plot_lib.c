@@ -165,6 +165,7 @@ int isFailing()
 void playTGCs();
 void playTGCs()
 {	
+	int continueMenu = 0;
 	//function for wanting to play a children's card game and deciding what is
 	// the best choice 
 	int tcg;
@@ -194,37 +195,72 @@ void playTGCs()
 	printf("You Picked %d \n", tcg);
 	printf("================================================================================\n");
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-	if (tcg == 1)
+	while (continueMenu == 0)
 	{
-		printf("You spent three hours palying a children's card game when you \n");
-		printf("should have been studying!\n");
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");
-
-	}
-	else if(tcg ==2)
-	{
-		printf("Your stress level did decrease because you watched television but \n");
-		printf("you also lost four hours of your day that could have been spent\n");
-		printf("more productively.\n");
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");
-
-	}
-	else if (tcg==3)
-	{
-		printf("Too much of a wimp to admit what you really enjoy in life?\n");
-		printf("Or do you finally realize how important your finals are?\n");
-		printf("At least you were able to do some chores and study for exams instead.\n");
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");
-
-	}
-	else if (tcg!=3)
-	{
-		printf("Choose again from the choices listed!");
-		scanf("%d", &tcg);
-		//this needs to go back up to option one to display the results...
+		if (tcg == 1)
+		{
+			printf("You spent three hours playing a children's card game when you \n");
+			printf("should have been studying!\n");
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");
+			randMin = 2;
+			randMax = 5;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.2;
+			randMax = 0.5;
+			randomNum(randMin, randMax);
+			GPA = GPA - randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+	
+		}
+		else if(tcg ==2)
+		{
+			printf("Your stress level did decrease because you watched television but \n");
+			printf("you also lost four hours of your day that could have been spent\n");
+			printf("more productively.\n");
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");
+			randMin = 2;
+			randMax = 5;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.2;
+			randMax = 0.5;
+			randomNum(randMin, randMax);
+			GPA = GPA - randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+	
+		}
+		else if (tcg==3)
+		{
+			printf("Too much of a wimp to admit what you really enjoy in life?\n");
+			printf("Or do you finally realize how important your finals are?\n");
+			printf("At least you were able to do some chores and study for exams instead.\n");
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");
+			randMin = 1;
+			randMax = 3;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel + randNum;
+			randMin = 0.2;
+			randMax = 0.5;
+			randomNum(randMin, randMax);
+			GPA = GPA + randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+	
+		}
+		else if (tcg!=3)
+		{
+			printf("Choose again from the choices listed!");
+			scanf("%d", &tcg);
+		}
 	}
 } 
 
@@ -329,7 +365,8 @@ void watchmovie()
 void party();
 void party()
 {
-	int choice;
+	int choice, continueMenu;
+	continueMenu = 0;
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("================================================================================\n");	
 	printf("Your phone buzzes in your pocket. You look at it and there's a text from %s.", yourFriend);
@@ -341,76 +378,81 @@ void party()
 	printf("2) Stay in and relax that night.\n");
 	printf("3) Stay in and study for your exam.\n");
 	scanf("%d", &choice);
-	if (choice == 1)
+	while (continueMenu == 0)
 	{
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");	
-		printf("The party was really fun! You met a bunch of cool people, dancing all night,\n");
-		printf("sipped on drank, and just had a good ol time. The only bad part is that you\n");
-	  printf(" woke up at Saturday and couldn't do any work the whole day because of you\n");
-	  printf(" had a headplitting headache the rest of the day, from getting so dehydrated.\n");
-		randMin = 2;
-		randMax = 5;
-		randomNum(randMin, randMax);
-		stressLevel = stressLevel - randNum;
-		randMin = 0.2;
-		randMax = 0.5;
-		randomNum(randMin, randMax);
-		GPA = GPA - randNum;
-		isStressed();
-		isFailing();
+		if (choice == 1)
+		{
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");	
+			printf("The party was really fun! You met a bunch of cool people, dancing all night,\n");
+			printf("sipped on drank, and just had a good ol time. The only bad part is that you\n");
+		  printf(" woke up at Saturday and couldn't do any work the whole day because of you\n");
+		  printf(" had a headplitting headache the rest of the day, from getting so dehydrated.\n");
+			randMin = 2;
+			randMax = 5;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.2;
+			randMax = 0.5;
+			randomNum(randMin, randMax);
+			GPA = GPA - randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+		}
+		else if (choice == 2)
+		{
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");	
+			printf("You text your friend back and decline the invitation. Come Friday night you\n");
+			printf(" flip on Netflix, cuddle up in your snuggly blanket, just chill out and\n");
+			printf(" catch up on all those episodes of Trailer Park Boys you've missed. It was a\n");
+			printf(" good night.\n");
+			randMin = 3;
+			randMax = 4;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.1;
+			randMax = 0.4;
+			randomNum(randMin, randMax);
+			GPA = GPA - randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+		}
+		else if (choice == 3)
+		{
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");	
+			printf("You text %s back and decline the invivation, apologizing saying that you really\n", yourFriend);
+			printf("need to study because you have a huge exam on Monday. Come Friday night you hit \n");
+			printf("the books HARD. Going over the textbook, powerpoint slides, old notes. After \n");
+			printf("a night of studying, you feel like you learned a lot and after studying more\n");
+			printf("the rest of the weekend you dominate the exam. Good job!\n");
+			randMin = 3;
+			randMax = 4;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel + randNum;
+			randMin = 0.2;
+			randMax = 0.4;
+			randomNum(randMin, randMax);
+			GPA = GPA + randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+		}
+		else
+		{
+			printf("Please enter 1, 2, or 3");
+		}
 	}
-	else if (choice == 2)
-	{
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");	
-		printf("You text your friend back and decline the invitation. Come Friday night you\n");
-		printf(" flip on Netflix, cuddle up in your snuggly blanket, just chill out and\n");
-		printf(" catch up on all those episodes of Trailer Park Boys you've missed. It was a\n");
-		printf(" good night.\n");
-		randMin = 3;
-		randMax = 4;
-		randomNum(randMin, randMax);
-		stressLevel = stressLevel - randNum;
-		randMin = 0.1;
-		randMax = 0.4;
-		randomNum(randMin, randMax);
-		GPA = GPA - randNum;
-		isStressed();
-		isFailing();
-	}
-	else if (choice == 3)
-	{
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");	
-		printf("You text %s back and decline the invivation, apologizing saying that you really\n", yourFriend);
-		printf("need to study because you have a huge exam on Monday. Come Friday night you hit \n");
-		printf("the books HARD. Going over the textbook, powerpoint slides, old notes. After \n");
-		printf("a night of studying, you feel like you learned a lot and after studying more\n");
-		printf("the rest of the weekend you dominate the exam. Good job!\n");
-		randMin = 3;
-		randMax = 4;
-		randomNum(randMin, randMax);
-		stressLevel = stressLevel + randNum;
-		randMin = 0.2;
-		randMax = 0.4;
-		randomNum(randMin, randMax);
-		GPA = GPA + randNum;
-		isStressed();
-		isFailing();
-	}
-	else
-	{
-		printf("Please enter 1, 2, or 3");
-		//make it redisplay menu
-	}
-
 }
 
 void goToBars();
 void goToBars()
 {
-	int choice;
+	int choice, menuChoice;
+	menuChoice = 0;
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("================================================================================\n");	
 	printf("One of your group members for a project in your databases class is turing 21! He\n");
@@ -420,55 +462,58 @@ void goToBars()
 	printf(" His birthday is Thursday night, and you have an 8:30am class on Friday. What do you\n");
 	printf("What do you want to do?\n1)Go to the bars, YOLO.\n2)Stay in and get a good nights rest.\n");
 	scanf("%d", &choice);
-	
-	if (choice == 1)
+	while (menuChoice == 0)
 	{
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");
-		printf("You pregame really hard before the bars with your friend, so that by the time you\n");
-		printf(" show up with your group member, you're good and ready. You start at Harry's and\n");
-		printf(" work your way down State St, stopping at Brothers and then finished the night at\n");
-		printf(" Where Else. At 3am after closing, you of course stop next door at Taco Bell, \n");
-		printf("and scarf down a crunchwrap supreme, washing it all down with some Baja Blast. \n");
-		printf("You stumble home and immediately pass out on your bed.\n BEEP BEEP BEEP. Your \n");
-		printf("alarm clock wakes you. With a sign you push the snooze button then glance at the \n");
-		printf("time.\n10:42AM\n\n NOOOOOOOOOOOO! You missed your 8:30 AND your 9:30 class. Your \n");
-		printf("8:30 class always has attendance quizzes so you know for sure you missed some points.\n");
-		printf("Your 9:30 class is a lab, so good luck making that up!\n");
-		randMin = 2;
-		randMax = 5;
-		randomNum(randMin, randMax);
-		stressLevel = stressLevel + randNum;
-		randMin = 0.2;
-		randMax = 0.5;
-		randomNum(randMin, randMax);
-		GPA = GPA - randNum;
-		isStressed();
-		isFailing();
-	}
-	else if (choice ==2)
-	{
-		printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		printf("================================================================================\n");
-		printf("You wish your group member a happy birthday, but let him know you can't make it \n");
-		printf("out to the bars that night. It is important to make it to your 8:30am class, the \n");
-		printf("professor always has attendance quizzes. Your group member seems dissapointed, so\n");
-		printf("you reassure him you will go bar hopping with him some other time.\n");
-		randMin = 3;
-		randMax = 4;
-		randomNum(randMin, randMax);
-		stressLevel = stressLevel - randNum;
-		randMin = 0.1;
-		randMax = 0.4;
-		randomNum(randMin, randMax);
-		GPA = GPA + randNum;
-		isStressed();
-		isFailing();
-	}
-	else
-	{
-		printf("Please enter 1 or 2.\n");
-		//bring back menu options
+		if (choice == 1)
+		{
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");
+			printf("You pregame really hard before the bars with your friend, so that by the time you\n");
+			printf(" show up with your group member, you're good and ready. You start at Harry's and\n");
+			printf(" work your way down State St, stopping at Brothers and then finished the night at\n");
+			printf(" Where Else. At 3am after closing, you of course stop next door at Taco Bell, \n");
+			printf("and scarf down a crunchwrap supreme, washing it all down with some Baja Blast. \n");
+			printf("You stumble home and immediately pass out on your bed.\n BEEP BEEP BEEP. Your \n");
+			printf("alarm clock wakes you. With a sign you push the snooze button then glance at the \n");
+			printf("time.\n10:42AM\n\n NOOOOOOOOOOOO! You missed your 8:30 AND your 9:30 class. Your \n");
+			printf("8:30 class always has attendance quizzes so you know for sure you missed some points.\n");
+			printf("Your 9:30 class is a lab, so good luck making that up!\n");
+			randMin = 2;
+			randMax = 5;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel + randNum;
+			randMin = 0.2;
+			randMax = 0.5;
+			randomNum(randMin, randMax);
+			GPA = GPA - randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+		}
+		else if (choice ==2)
+		{
+			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+			printf("================================================================================\n");
+			printf("You wish your group member a happy birthday, but let him know you can't make it \n");
+			printf("out to the bars that night. It is important to make it to your 8:30am class, the \n");
+			printf("professor always has attendance quizzes. Your group member seems dissapointed, so\n");
+			printf("you reassure him you will go bar hopping with him some other time.\n");
+			randMin = 3;
+			randMax = 4;
+			randomNum(randMin, randMax);
+			stressLevel = stressLevel - randNum;
+			randMin = 0.1;
+			randMax = 0.4;
+			randomNum(randMin, randMax);
+			GPA = GPA + randNum;
+			isStressed();
+			isFailing();
+			continueMenu = 1;
+		}
+		else
+		{
+			printf("Please enter 1 or 2.\n");
+		}
 	}
 }
 

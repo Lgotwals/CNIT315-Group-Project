@@ -3,7 +3,6 @@
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 char yourFriend[50];
 char fName[50];
@@ -25,6 +24,10 @@ void randomNum(int);
 void randomNum(int max)
 {
 	int ran;
+	if (max == 0)
+	{
+		max++;
+	}
 	srand ( time(NULL) );
 	ran = rand()%max;
 	randNum = ran;
@@ -99,79 +102,79 @@ int isFailing()
 	{
 		GPA = 4.0;
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("A, good job!\n");
 	}
 	if (GPA > 3.7)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("A, good job!\n");
 	}
 	else if (GPA > 3.3)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("A-\n");
 	}
 	else if (GPA > 3)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("You have a B+\n");
 	}
 	else if (GPA > 2.7)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("B\n");
 	}
 	else if (GPA > 2.3)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("B-\n");
 	}
 	else if (GPA > 2)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("C+, don't let yourself fall too far behind.\n");
 	}
 	else if (GPA > 1.7)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("C, don't let yourself fall too far behind.\n");
 	}
 	else if  (GPA > 1.3)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("C-, don't let your grade drop too low.\n");
 	}
 	else if  (GPA > 1.0)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("D+, try to improve your grade before it's too late.\n");
 	}
 	else if  (GPA > 0.7)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("D, you're on the verge of failing improve your grades now!\n");
 	}
 	else if (GPA > 0.0)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("D-, you're barely keeping a passing grade fix it while you still can\n");
 	}
 	else if (GPA == 0.0)
 	{
 		printf("Your current GPA is:");
-		printf("%f\n", GPA);
+		printf("%.2f\n", GPA);
 		printf("Sorry, but its over. You failed out. You spent too much time hanging out with\n");
 		printf("friends and having a good time than studying. Shoulda studied more! \n");
 		printf("Re-apply in the fall.\n");
@@ -226,9 +229,9 @@ void playTGCs()
 			//randMin = 2;
 			randMax = 5;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
+			stressLevel = stressLevel - randNum;
 			//randMin = 0.2;
-			randMax = 0.5;
+			randMax = 5;
 			randomNum(randMax);
 			GPA = GPA - randNum/10.0;
 			isStressed();
@@ -246,9 +249,9 @@ void playTGCs()
 			//randMin = 2;
 			randMax = 5;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
+			stressLevel = stressLevel - randNum;
 			//randMin = 0.2;
-			randMax = 0.5;
+			randMax = 5;
 			randomNum(randMax);
 			GPA = GPA - randNum/10.0;
 			isStressed();
@@ -266,9 +269,9 @@ void playTGCs()
 			//randMin = 1;
 			randMax = 3;
 			randomNum(randMax);
-			stressLevel = stressLevel + randNum/10.0;
+			stressLevel = stressLevel + randNum;
 			///randMin = 0.2;
-			randMax = 0.5;
+			randMax = 5;
 			randomNum(randMax);
 			GPA = GPA + randNum/10.0;
 			isStressed();
@@ -411,9 +414,9 @@ void party()
 			//randMin = 2;
 			randMax = 5;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
+			stressLevel = stressLevel - randNum;
 			//randMin = 0.2;
-			randMax = 0.5;
+			randMax = 5;
 			randomNum(randMax);
 			GPA = GPA - randNum/10.0;
 			isStressed();
@@ -430,8 +433,8 @@ void party()
 			printf("good night.\n");
 			randMax = 4;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
-			randMax = 0.4;
+			stressLevel = stressLevel - randNum;
+			randMax = 4;
 			randomNum(randMax);
 			GPA = GPA - randNum/10.0;
 			isStressed();
@@ -450,9 +453,9 @@ void party()
 			//randMin = 3;
 			randMax = 4;
 			randomNum(randMax);
-			stressLevel = stressLevel + randNum/10.0;
+			stressLevel = stressLevel + randNum;
 			//randMin = 0.2;
-			randMax = 0.4;
+			randMax = 4;
 			randomNum(randMax);
 			GPA = GPA + randNum/10.0;
 			isStressed();
@@ -504,9 +507,9 @@ void goToBars()
 			//randMin = 2;
 			randMax = 5;
 			randomNum(randMax);
-			stressLevel = stressLevel + randNum/10.0;
+			stressLevel = stressLevel + randNum;
 			//randMin = 0.2;
-			randMax = 0.5;
+			randMax = 5;
 			randomNum(randMax);
 			GPA = GPA - randNum/10.0;
 			isStressed();
@@ -524,9 +527,9 @@ void goToBars()
 			//randMin = 3;
 			randMax = 4;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
+			stressLevel = stressLevel - randNum;
 			//randMin = 0.1;
-			randMax = 0.4;
+			randMax = 4;
 			randomNum(randMax);
 			GPA = GPA + randNum/10.0;
 			isStressed();
@@ -571,9 +574,9 @@ void sleepIn()
 				//randMin = 1;
 				randMax = 4;
 				randomNum(randMax);
-				stressLevel = stressLevel - randNum/10.0;
+				stressLevel = stressLevel - randNum;
 				//randMin = 0.1;
-				randMax = 0.4;
+				randMax = 4;
 				randomNum(randMax);
 				GPA = GPA - randNum/10.0;
 				isStressed();
@@ -592,7 +595,7 @@ void sleepIn()
 					//randMin = 1;
 					randMax = 4;
 					randomNum(randMax);
-					stressLevel = stressLevel - randNum/10.0;
+					stressLevel = stressLevel - randNum;
 					isStressed();
 					isFailing();
 					continueMenu = 1;
@@ -615,9 +618,9 @@ void sleepIn()
 				//randMin = 1;
 				randMax = 3;
 				randomNum(randMax);
-				stressLevel = stressLevel + randNum/10.0;
+				stressLevel = stressLevel + randNum;
 				//randMin = 0.1;
-				randMax = 0.4;
+				randMax = 4;
 				randomNum(randMax);
 				GPA = GPA + randNum/10.0;
 				isStressed();
@@ -639,7 +642,7 @@ void sleepIn()
 				//randMin = 1;
 				randMax = 3;
 				randomNum(randMax);
-				stressLevel = stressLevel + randNum/10.0;
+				stressLevel = stressLevel + randNum;
 				isStressed();
 				isFailing();
 				continueMenu = 1;
@@ -687,9 +690,9 @@ void goToSportingEvent()
 			//randMin = 1;
 			randMax = 5;
 			randomNum(randMax);
-			stressLevel = stressLevel + randNum/10.0;
+			stressLevel = stressLevel + randNum;
 			//randMin = 0.1;
-			randMax = 0.2;
+			randMax = 2;
 			randomNum(randMax);
 			GPA = GPA + randNum/10.0;
 		}
@@ -704,9 +707,9 @@ void goToSportingEvent()
 			//randMin = 0;
 			randMax = 2;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
+			stressLevel = stressLevel - randNum;
 			//randMin = 0.1;
-			randMax = 0.2;
+			randMax = 2;
 			randomNum(randMax);
 			GPA = GPA + randNum/10.0;
 		}
@@ -718,9 +721,9 @@ void goToSportingEvent()
 			//randMin = 4;
 			randMax = 7;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
+			stressLevel = stressLevel - randNum;
 			//randMin = 0.1;
-			randMax = 0.4;
+			randMax = 4;
 			randomNum(randMax);
 			GPA = GPA - randNum/10.0;
 		}
@@ -729,11 +732,11 @@ void goToSportingEvent()
 			printf("You missed a great game but you finished all your homework\n");
 			printf("and was able to catch up on sleep and read.\n");
 			//randMin = 0;
-			randMax = 1;
+			randMax = 2;
 			randomNum(randMax);
-			stressLevel = stressLevel - randNum/10.0;
+			stressLevel = stressLevel - randNum;
 			//randMin = 0.1;
-			randMax = 0.3;
+			randMax = 3;
 			randomNum(randMax);
 			GPA = GPA + randNum/10.0;
 		}

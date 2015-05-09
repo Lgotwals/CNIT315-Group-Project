@@ -3,15 +3,12 @@
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 char yourFriend[50];
 char fName[50];
-int stressLevel;
-int GPA;
-double randMin, randMax, randNum;
-
 int stressLevel = 10;
-int GPA = 3;
+double GPA = 3.0, randMin, randMax, randNum;
 
 /*
 void randomNum(double, double);
@@ -102,79 +99,79 @@ int isFailing()
 	{
 		GPA = 4.0;
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("A, good job!\n");
 	}
 	if (GPA > 3.7)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("A, good job!\n");
 	}
 	else if (GPA > 3.3)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("A-\n");
 	}
 	else if (GPA > 3)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("You have a B+\n");
 	}
 	else if (GPA > 2.7)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("B\n");
 	}
 	else if (GPA > 2.3)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("B-\n");
 	}
 	else if (GPA > 2)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("C+, don't let yourself fall too far behind.\n");
 	}
 	else if (GPA > 1.7)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("C, don't let yourself fall too far behind.\n");
 	}
 	else if  (GPA > 1.3)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("C-, don't let your grade drop too low.\n");
 	}
 	else if  (GPA > 1.0)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("D+, try to improve your grade before it's too late.\n");
 	}
 	else if  (GPA > 0.7)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("D, you're on the verge of failing improve your grades now!\n");
 	}
 	else if (GPA > 0.0)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("D-, you're barely keeping a passing grade fix it while you still can\n");
 	}
 	else if (GPA == 0.0)
 	{
 		printf("Your current GPA is:");
-		printf("%d\n", GPA);
+		printf("%f\n", GPA);
 		printf("Sorry, but its over. You failed out. You spent too much time hanging out with\n");
 		printf("friends and having a good time than studying. Shoulda studied more! \n");
 		printf("Re-apply in the fall.\n");

@@ -347,7 +347,7 @@ void watchmovie()
 	printf("The next and greatest new superhero movie just released and %s wants you to go\n", yourFriend);
 	printf("%s even offered to pay for it all and make sure you got some popcorn too.\n", yourFriend);
 	printf("you think to yourself that this is a pretty good deal, don't have to pay for\n");
-	printf("a ticket and get popocorn.  Not to mention getting ot chat with your \n");
+	printf("a ticket and get popocorn.  Not to mention getting to chat with your \n");
 	printf("friends about the movie later.\n");
 	printf("\t==~~~~~~~~~~~~~~~~~~~~==\t\n");
 	printf("You have to decide if you want to go and watch the movie so you can later talk\n");
@@ -460,10 +460,11 @@ void goToBars()
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	printf("================================================================================\n");	
 	printf("One of your group members for a project in your databases class is turing 21! He\n");
-	printf(" invites you to go to the bars with him at midnight to celebrate. It's only tradition\n");
-	printf(" to buy him lots of drink, and you should definitely take him to Harry's for the\n");
-	printf(" one and only birthday shot! You're not sure if you should be out too late though.\n");
-	printf(" His birthday is Thursday night, and you have an 8:30am class on Friday. What do you\n");
+	printf(" invites you to go to the bars with him at midnight to celebrate. It's only\n");
+	printf(" tradition to buy him lots of drink, and you should definitely take him to\n");
+	printf(" Harry's for the one and only birthday shot! You're not sure if you should.\n");
+	printf(" be out too late thoughHis birthday is Thursday night, and you have an 8:30am\n");
+	printf(" class on Friday.");
 	printf("What do you want to do?\n1)Go to the bars, YOLO.\n2)Stay in and get a good nights rest.\n");
 	scanf("%d", &choice);
 	while (continueMenu == 0)
@@ -472,13 +473,13 @@ void goToBars()
 		{
 			printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 			printf("================================================================================\n");
-			printf("You pregame really hard before the bars with your friend, so that by the time you\n");
-			printf(" show up with your group member, you're good and ready. You start at Harry's and\n");
-			printf(" work your way down State St, stopping at Brothers and then finished the night at\n");
-			printf(" Where Else. At 3am after closing, you of course stop next door at Taco Bell, \n");
-			printf("and scarf down a crunchwrap supreme, washing it all down with some Baja Blast. \n");
-			printf("You stumble home and immediately pass out on your bed.\n BEEP BEEP BEEP. Your \n");
-			printf("alarm clock wakes you. With a sign you push the snooze button then glance at the \n");
+			printf("You pregame really hard before the bars with your friend, so that by the time\n");
+			printf(" you show up with your group member, you're good and ready. You start at\n");
+			printf(" Harry's and work your way down State St, stopping at Brothers and then\n");
+			printf(" finished the night at Where Else. At 3am after closing, you of course stop\n");
+			printf(" next door at Taco Bell, and scarf down a crunchwrap supreme, washing it all\n");
+			printf(" down with some Baja Blast. You stumble home and immediately pass out on your bed.\nBEEP BEEP BEEP. Your \n");
+			printf("alarm clock wakes you. With a sign you push the snooze button then glance at the\n");
 			printf("time.\n10:42AM\n\n NOOOOOOOOOOOO! You missed your 8:30 AND your 9:30 class. Your \n");
 			printf("8:30 class always has attendance quizzes so you know for sure you missed some points.\n");
 			printf("Your 9:30 class is a lab, so good luck making that up!\n");

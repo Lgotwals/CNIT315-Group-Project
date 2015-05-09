@@ -740,7 +740,7 @@ void goToSportingEvent()
 			randomNum(randMax);
 			GPA = GPA + randNum/10.0;
 		}
-	} while (choice > 0 && choice < 5);
+	} while (choice < 0 && choice > 5);
 	
 	isStressed();
 	isFailing();

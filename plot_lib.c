@@ -10,7 +10,7 @@ int stressLevel;
 int GPA;
 double randMin, randMax, randNum;
 
-stressLevel = 10;
+int stressLevel = 10;
 int GPA = 3;
 
 /*

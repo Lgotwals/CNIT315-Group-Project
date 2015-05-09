@@ -9,6 +9,9 @@ char fName[50];
 int stressLevel;
 double GPA, randMin, randMax, randNum;
 
+stressLevel = 10;
+GPA = 3.0;
+
 void randomNum(double, double);
 void randomNum(double min, double max)
 {
@@ -65,7 +68,7 @@ int isStressed()
 		printf("twitchy. Do something fun to chill out.\n");
 	}
 	
-	else if (stressLevel == 20)
+	else if (stressLevel > 19)
 	{
 		printf("You died. RIP.");	
 		return 1;
@@ -83,6 +86,13 @@ int isStressed()
 int isFailing();
 int isFailing()
 {
+	if (GPA > 4.0)
+	{
+		GPA = 4.0;
+		printf("Your current GPA is:");
+		printf("%f\n", GPA);
+		printf("A, good job!\n");
+	}
 	if (GPA > 3.7)
 	{
 		printf("Your current GPA is:");
@@ -158,6 +168,7 @@ int isFailing()
 		printf("Re-apply in the fall.\n");
 		return 1;
 	}
+	
 	return 0;
 }
 
